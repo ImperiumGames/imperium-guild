@@ -5,6 +5,7 @@ export { default as MenuIcon } from '@material-ui/icons/Menu'
 
 export { ArcherIcon } from './Archer'
 export { CodeStatsIcon } from './CodeStats'
+export { DiscordIcon } from './Discord'
 export { FacebookIcon } from './Facebook'
 export { GitHubIcon } from './GitHub'
 export { GraphIcon } from './Graph'

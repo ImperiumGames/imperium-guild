@@ -9,6 +9,7 @@ import {
   Layers,
   VKIcon,
   ArcherIcon,
+  DiscordIcon,
 } from 'icons'
 import Link from 'next/link'
 import { useStyles } from './use-styles'
@@ -72,17 +73,11 @@ export const LeftMenuList = () => {
           </ListItemIcon>
           <ListItemText primary="Facebook" />
         </ListItem>
-        <ListItem
-          button
-          component="a"
-          href="https://www.instagram.com/alexkhotkevich/"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
+        <ListItem button component="a" href="https://discord.gg/pqWknUe28M" rel="noreferrer noopener" target="_blank">
           <ListItemIcon>
-            <InstagramIcon />
+            <DiscordIcon />
           </ListItemIcon>
-          <ListItemText primary="Instagram" />
+          <ListItemText primary="Discord" />
         </ListItem>
       </List>
       <Divider light variant="middle" />

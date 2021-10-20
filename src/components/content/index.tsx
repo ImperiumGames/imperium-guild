@@ -7,7 +7,7 @@ export const Content: React.FC = ({ children }) => {
   const classes = useStyles()
 
   return (
-    <Grid container direction="column" alignItems="center" classes={{ root: classes.root }} className={classes.dusk}>
+    <Grid container direction="column" alignItems="center" classes={{ root: classes.root }}>
       {children}
     </Grid>
   )
