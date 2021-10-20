@@ -1,5 +1,15 @@
 import { Divider, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
-import { CodeStatsIcon, FacebookIcon, GitHubIcon, GraphIcon, InfoIcon, InstagramIcon, Layers, VKIcon } from 'icons'
+import {
+  CodeStatsIcon,
+  FacebookIcon,
+  GitHubIcon,
+  GraphIcon,
+  InfoIcon,
+  InstagramIcon,
+  Layers,
+  VKIcon,
+  ArcherIcon,
+} from 'icons'
 import Link from 'next/link'
 import { useStyles } from './use-styles'
 export const LeftMenuList = () => {
@@ -91,6 +101,14 @@ export const LeftMenuList = () => {
               <Layers />
             </ListItemIcon>
             <ListItemText primary="UI kit" />
+          </ListItem>
+        </Link>
+        <Link href="/archer" passHref>
+          <ListItem button>
+            <ListItemIcon>
+              <ArcherIcon />
+            </ListItemIcon>
+            <ListItemText primary="Archer" />
           </ListItem>
         </Link>
       </List>
