@@ -27,7 +27,7 @@ export const TopAppBar = () => {
         <div className={classes.title}>
           <NextLink href={'/'} passHref>
             <MuiLink variant="h6" color="inherit" underline="none">
-              Alex Playground
+              Imperium
             </MuiLink>
           </NextLink>
         </div>

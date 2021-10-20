@@ -1,10 +1,10 @@
-import avatar from 'assets/img/avatar.svg'
+import aquila from 'assets/img/aquila.svg'
 import { Card } from 'components/card'
 import Image from 'next/image'
 export default function Main() {
   return (
     <Card>
-      <Image src={avatar} alt="avatar" />
+      <Image src={aquila} alt="aquila" />
     </Card>
   )
 }
