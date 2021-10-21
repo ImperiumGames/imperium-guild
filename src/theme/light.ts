@@ -1,9 +1,9 @@
-import { createTheme } from '@material-ui/core'
-import { green, orange } from '@material-ui/core/colors'
+import { createTheme } from '@mui/material/styles'
+import { green, orange } from '@mui/material/colors'
 
 export const light = createTheme({
   palette: {
-    type: 'light',
+    mode: 'light',
     primary: green,
     secondary: orange,
   },
