@@ -1,7 +1,7 @@
-export { default as BrightnessIcon } from '@material-ui/icons/Brightness6'
-export { default as InfoIcon } from '@material-ui/icons/InfoOutlined'
-export { default as Layers } from '@material-ui/icons/Layers'
-export { default as MenuIcon } from '@material-ui/icons/Menu'
+export { default as BrightnessIcon } from '@mui/icons-material/Brightness6'
+export { default as InfoIcon } from '@mui/icons-material/InfoOutlined'
+export { default as Layers } from '@mui/icons-material/Layers'
+export { default as MenuIcon } from '@mui/icons-material/Menu'
 
 export { ArcherIcon } from './Archer'
 export { CodeStatsIcon } from './CodeStats'

@@ -1,4 +1,4 @@
-import { Tab, Tabs, Typography } from '@material-ui/core'
+import { Tab, Tabs, Typography } from '@mui/material'
 import { Card, MuiTypography } from 'components'
 import { useState } from 'react'
 

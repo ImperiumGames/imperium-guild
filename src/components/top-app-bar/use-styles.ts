@@ -1,6 +1,6 @@
-import { createStyles, makeStyles } from '@material-ui/core'
+import { createStyles, makeStyles } from '@mui/styles'
 
-export const useStyles = makeStyles(theme =>
+export const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
       flexGrow: 1,

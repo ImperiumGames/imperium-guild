@@ -1,6 +1,5 @@
 import React from 'react'
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
-
+import { SwipeableDrawer } from '@mui/material'
 import { useStore } from 'effector-react'
 import { $isMenuOpen, closeMenu, openMenu } from 'models/gui'
 

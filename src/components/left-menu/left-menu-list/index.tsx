@@ -1,4 +1,4 @@
-import { Divider, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
+import { Divider, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
 import {
   CodeStatsIcon,
   FacebookIcon,

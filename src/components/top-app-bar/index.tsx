@@ -1,7 +1,7 @@
 import React from 'react'
 import { default as NextLink } from 'next/link'
 
-import { AppBar, IconButton, Link as MuiLink, Toolbar } from '@material-ui/core'
+import { AppBar, IconButton, Link as MuiLink, Toolbar } from '@mui/material'
 
 import { useLocalStorage } from 'hooks'
 import { toggleMenu, toggleTheme } from 'models/gui'

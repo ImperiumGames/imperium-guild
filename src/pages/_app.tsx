@@ -13,6 +13,15 @@ import { dark, light } from 'theme'
 import { Content, LeftMenu, TopAppBar } from 'components'
 import { createEmotionCache } from 'utils'
 
+// to Remove later it could be your App.tsx file or theme file that is included in your tsconfig.json
+import { Theme } from '@mui/material/styles'
+
+declare module '@mui/styles/defaultTheme' {
+  interface DefaultTheme extends Theme {}
+}
+
+// to Remove later /
+
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
 
