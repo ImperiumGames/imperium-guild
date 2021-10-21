@@ -16,8 +16,10 @@ export const LeftMenu = () => {
       onClose={() => closeMenu()}
       onOpen={() => openMenu()}
       PaperProps={{
-        classes: {
-          root: classes.paperRoot,
+        sx: {
+          marginTop: 8,
+          background: 'transparent',
+          border: 'none',
         },
       }}
     >

@@ -5,9 +5,5 @@ export const useStyles = makeStyles({
     overflow: 'auto',
     width: 250,
   },
-  paperRoot: {
-    marginTop: 64,
-    background: 'transparent',
-    border: 'none',
-  },
+  paperRoot: {},
 })

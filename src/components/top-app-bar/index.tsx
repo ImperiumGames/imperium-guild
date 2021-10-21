@@ -24,7 +24,7 @@ export const TopAppBar = () => {
         >
           <MenuIcon />
         </IconButton>
-        <div className={classes.title}>
+        <div style={{ flexGrow: 1 }}>
           <NextLink href={'/'} passHref>
             <MuiLink variant="h6" color="inherit" underline="none">
               Imperium
