@@ -5,24 +5,27 @@ import { useEffect } from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from '@mui/material/styles'
 import { useStore } from 'effector-react'
-import { CssBaseline, useMediaQuery } from '@material-ui/core'
+import { CssBaseline, useMediaQuery } from '@mui/material'
+import { CacheProvider, EmotionCache } from '@emotion/react'
 import { useLocalStorage } from 'hooks'
 import { $theme, setTheme } from 'models/gui'
 import { dark, light } from 'theme'
 import { Content, LeftMenu, TopAppBar } from 'components'
+import { createEmotionCache } from 'utils'
+
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache()
 
 const enhance = withHydrate()
 
-function MyApp({ Component, pageProps }: AppProps) {
+interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache
+}
+
+function MyApp({ Component, pageProps, emotionCache = clientSideEmotionCache }: MyAppProps) {
   const theme = useStore($theme)
   const isSystemDark = useMediaQuery('(prefers-color-scheme: dark)')
   const [isDark, setIsDark] = useLocalStorage<boolean>('dark')
-  useEffect(() => {
-    const jssStyles = document.querySelector('#jss-server-side')
-    if (jssStyles) {
-      jssStyles.parentElement?.removeChild(jssStyles)
-    }
-  }, [])
   useEffect(() => {
     const timeout = setTimeout(() => {
       isDark === undefined && setIsDark(isSystemDark)
@@ -37,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [isDark])
 
   return (
-    <>
+    <CacheProvider value={emotionCache}>
       <Head>
         <title>Imperium</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
@@ -50,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </Content>
       </ThemeProvider>
-    </>
+    </CacheProvider>
   )
 }
 export default enhance(MyApp)

@@ -1,13 +1,17 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
-
-import { useStyles } from './use-styles'
+import { Grid } from '@mui/material'
 
 export const Content: React.FC = ({ children }) => {
-  const classes = useStyles()
-
   return (
-    <Grid container direction="column" alignItems="center" classes={{ root: classes.root }}>
+    <Grid
+      sx={{
+        minHeight: '100vh',
+        paddingTop: '6rem',
+      }}
+      container
+      direction="column"
+      alignItems="center"
+    >
       {children}
     </Grid>
   )
