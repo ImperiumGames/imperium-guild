@@ -4,6 +4,7 @@ import React from 'react'
 export const Card: React.FC = ({ children }) => {
   return (
     <Paper
+      elevation={0}
       sx={{
         width: '61.8vw',
         padding: '1.5rem',
