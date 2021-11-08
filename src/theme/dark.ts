@@ -4,10 +4,10 @@ import { green, orange } from '@mui/material/colors'
 export const dark = createTheme({
   palette: {
     mode: 'dark',
-    primary: green,
-    secondary: orange,
-    background: {
-      default: '#000000',
-    },
+    primary: orange,
+    secondary: green,
+    // background: {
+    //   default: '#000000',
+    // },
   },
 })

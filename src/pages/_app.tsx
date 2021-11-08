@@ -15,6 +15,7 @@ import { createEmotionCache } from 'utils'
 
 // to Remove later it could be your App.tsx file or theme file that is included in your tsconfig.json
 import { Theme } from '@mui/material/styles'
+import { Footer } from 'components/footer'
 
 declare module '@mui/styles/defaultTheme' {
   interface DefaultTheme extends Theme {}
@@ -61,6 +62,7 @@ function MyApp({ Component, pageProps, emotionCache = clientSideEmotionCache }: 
         <Content>
           <Component {...pageProps} />
         </Content>
+        <Footer />
       </ThemeProvider>
     </CacheProvider>
   )
