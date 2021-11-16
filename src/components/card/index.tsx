@@ -1,10 +1,10 @@
-import { Paper } from '@mui/material'
+import { Paper, PaperProps } from '@mui/material'
 import React from 'react'
 
-export const Card: React.FC = ({ children }) => {
+export function Card({ children, ...rest }: PaperProps) {
   return (
     <Paper
-      elevation={0}
+      {...rest}
       sx={{
         width: '61.8vw',
         padding: '1.5rem',

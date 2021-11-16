@@ -1,14 +1,20 @@
-import { Accordion as MuiAccordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material'
+import {
+  Accordion as MuiAccordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+  AccordionProps,
+} from '@mui/material'
 import { ExpandMore } from '@mui/icons-material'
 
-export interface Accordion {
+export interface Accordion extends Partial<AccordionProps> {
   header: string
   text: string
 }
 
-export function Accordion({ header, text }: Accordion) {
+export function Accordion({ header, text, ...rest }: Accordion) {
   return (
-    <MuiAccordion>
+    <MuiAccordion {...rest}>
       <AccordionSummary expandIcon={<ExpandMore />}>
         <Typography>{header}</Typography>
       </AccordionSummary>
