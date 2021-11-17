@@ -1,4 +1,5 @@
 // import 'styles/globals.css'
+// import 'styles/borders.css'
 import type { AppProps } from 'next/app'
 import { withHydrate } from 'effector-next'
 import { useEffect } from 'react'
